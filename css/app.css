@@ -455,17 +455,23 @@ h1 {
 }
 
 #start {
-  margin-top: 100px;
+  margin-top: 70px;
   width: 70px;
   border-radius: 5px;
+  bottom: 150px;
 }
 
 .questions {
+  text-align: center;
   margin-left: 25px;
   margin: 0 auto;
+  bottom: 120px;
   color: red;
+
 }
 .choices {
-  display: inline-block;
+  display: block;
+  bottom: 100px;
+
 }
 

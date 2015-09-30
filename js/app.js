@@ -1,6 +1,7 @@
 $(document).ready(function() {
 	var counter = 0;
 	var score = 0;
+	var currentQuestion = 0;
 
 	var quizQuestions = [{
 	question:"In what year was America founded ?",
@@ -34,16 +35,17 @@ $(document).ready(function() {
 	})
 
 	$("#start").on("click", function(){
-	
+
+	$(".choices, .questions").empty()	
+
 	$("#start").click(counter++)
 			
-	$(".choices").append("<h2>" + quizQuestions[counter].question + "</h2>")
+	$(".questions").append("<h2>" + quizQuestions[counter].question + "</h2>")
 
 	for(var i = 0 ; i < quizQuestions[counter].choices.length;i+=1){
-		$(".choices").append("<li>" + quizQuestions[counter].choices[i] + "</li>")
-	
-}
-})
+		$(".choices").append( "<ul>" + "<input type='radio'/>" + quizQuestions[counter].choices[i] + "</ul>")
+	}
+})	
 
 counter+=0;	
 
