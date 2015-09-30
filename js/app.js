@@ -38,14 +38,17 @@ $(document).ready(function() {
 
 	$(".choices, .questions").empty()	
 
-	$("#start").click(counter++)
+	counter++
+
+	$("#count").text(counter);
+
 			
 	$(".questions").append("<h2>" + quizQuestions[counter].question + "</h2>")
 
 	for(var i = 0 ; i < quizQuestions[counter].choices.length;i+=1){
 		$(".choices").append( "<ul>" + "<input type='radio'/>" + quizQuestions[counter].choices[i] + "</ul>")
 	}
-})	
+})
 
 counter+=0;	
 

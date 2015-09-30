@@ -475,3 +475,8 @@ h1 {
 
 }
 
+#count {
+  width: 50px;
+  height: 20px;
+  text-align: bottom;
+}
