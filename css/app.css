@@ -461,6 +461,13 @@ h1 {
   bottom: 150px;
 }
 
+#next{
+  margin-top: 70px;
+  width: 70px;
+  border-radius: 5px;
+  bottom: 150px; 
+}
+
 .questions {
   text-align: center;
   margin-left: 25px;

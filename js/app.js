@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	var counter = 0;
 	var score = 0;
-	var currentQuestion = 0;
+
 
 	var quizQuestions = [{
 	question:"In what year was America founded ?",
@@ -31,25 +31,27 @@ $(document).ready(function() {
 ]
 
 	$("#start").click(function() {
-		$(this).text("Next");
+			$("#start").hide()
+			$("#next").show()
 	})
+	
+	$("#next").on("click", function(){
+		
+				$(".choices, .questions").empty();
 
-	$("#start").on("click", function(){
-
-	$(".choices, .questions").empty()	
-
-	counter++
-
-	$("#count").text(counter);
-
-			
-	$(".questions").append("<h2>" + quizQuestions[counter].question + "</h2>")
+			function incrementCounter(){
+				$( "#count").text(counter);
+			};	
+				
+				$(".questions").append("<h2>" + quizQuestions[counter].question + "</h2>")
 
 	for(var i = 0 ; i < quizQuestions[counter].choices.length;i+=1){
 		$(".choices").append( "<ul>" + "<input type='radio'/>" + quizQuestions[counter].choices[i] + "</ul>")
-	}
+	}				
+
+incrementCounter();
+counter++
 })
 
-counter+=0;	
 
 });
