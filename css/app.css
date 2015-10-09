@@ -462,6 +462,7 @@ h1 {
 }
 
 #next{
+  display: none;
   margin-top: 70px;
   width: 70px;
   border-radius: 5px;
@@ -486,4 +487,11 @@ h1 {
   width: 50px;
   height: 20px;
   text-align: bottom;
+}
+
+#score {
+  display: inline-block;
+  text-align: right;
+  left: 120px;
+  width: 70px;
 }
